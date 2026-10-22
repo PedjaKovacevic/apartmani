@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rezervacija – Boravak (3/3)</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="apartmani.html">Ponuda smještaja</a>
+      <a href="lavanda.html">Detalji apartmana</a>
+      <a href="rezervacija.html">Rezervacija</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a href="o-nama.html">O nama</a>
+      <a href="cjenik.html">Cjenik</a>
+    </nav>
+
+    <main>
+      <h1>Rezervacija apartmana</h1>
+
+      <ol class="koraci">
+        <li class="gotov">Osobni podaci</li>
+        <li class="gotov">Adresa</li>
+        <li class="aktivan">Boravak</li>
+      </ol>
+
+      <form class="obrazac" action="kraj.html" method="get">
+        <fieldset>
+          <legend>Apartman i termin</legend>
+
+          <div class="polje">
+            <label for="apartman">Apartman <span class="obavezno">*</span></label>
+            <select id="apartman" name="apartman" required>
+              <option value="">– odaberite –</option>
+              <option value="lavanda">Lavanda (2 osobe)</option>
+              <option value="maslina">Maslina</option>
+              <option value="ruzmarin">Ružmarin</option>
+            </select>
+          </div>
+
+          <div class="red">
+            <div class="polje">
+              <label for="datum_prijave">Datum dolaska <span class="obavezno">*</span></label>
+              <input type="date" id="datum_prijave" name="datum_prijave" required />
+            </div>
+            <div class="polje">
+              <label for="datum_odjave">Datum odlaska <span class="obavezno">*</span></label>
+              <input type="date" id="datum_odjave" name="datum_odjave" required />
+            </div>
+          </div>
+
+          <div class="red">
+            <div class="polje">
+              <label for="odrasli">Broj odraslih <span class="obavezno">*</span></label>
+              <input type="number" id="odrasli" name="odrasli" min="1" max="8" value="2" required />
+            </div>
+            <div class="polje">
+              <label for="djeca">Broj djece (do 12 g.)</label>
+              <input type="number" id="djeca" name="djeca" min="0" max="6" value="0" />
+            </div>
+          </div>
+
+          <div class="polje">
+            <label for="dolazak">Okvirno vrijeme dolaska</label>
+            <select id="dolazak" name="dolazak">
+              <option>Ne znam još</option>
+              <option>14:00 – 16:00</option>
+              <option>16:00 – 18:00</option>
+              <option>18:00 – 20:00</option>
+              <option>Nakon 20:00</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Dodatne usluge</legend>
+
+          <div class="izbori stupac">
+            <label><input type="checkbox" name="usluge" value="parking" /> Parkirno mjesto</label>
+            <label><input type="checkbox" name="usluge" value="krevetic" /> Dječji krevetić</label>
+            <label><input type="checkbox" name="usluge" value="ljubimac" /> Dolazim s kućnim ljubimcem</label>
+            <label><input type="checkbox" name="usluge" value="transfer" /> Transfer iz zračne luke Split</label>
+            <label><input type="checkbox" name="usluge" value="dorucak" /> Doručak</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Još nešto</legend>
+
+          <div class="polje">
+            <label for="izvor">Kako ste saznali za nas?</label>
+            <select id="izvor" name="izvor">
+              <option value="">– odaberite –</option>
+              <option>Google pretraživanje</option>
+              <option>Booking.com / Airbnb</option>
+              <option>Društvene mreže</option>
+              <option>Preporuka prijatelja</option>
+              <option>Već sam bio/la kod vas</option>
+              <option>Ostalo</option>
+            </select>
+          </div>
+
+          <div class="polje">
+            <label for="poruka">Posebni zahtjevi ili napomene</label>
+            <textarea id="poruka" name="poruka" rows="4" placeholder="Npr. kasni dolazak, alergije, prizemlje…"></textarea>
+          </div>
+
+          <div class="izbori stupac">
+            <label>
+              <input type="checkbox" name="uvjeti" required />
+              Prihvaćam uvjete rezervacije i obradu osobnih podataka <span class="obavezno">*</span>
+            </label>
+            <label>
+              <input type="checkbox" name="novosti" />
+              Želim primati obavijesti o posebnim ponudama
+            </label>
+          </div>
+        </fieldset>
+
+        <p class="napomena"><span class="obavezno">*</span> Obavezna polja</p>
+
+        <div class="gumbi">
+          <a class="gumb sporedni" href="obrazac2.html">Natrag</a>
+          <button class="gumb" type="submit">Pošalji rezervaciju</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
