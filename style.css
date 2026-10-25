@@ -52,6 +52,15 @@ p {
   text-align: justify;
 }
 
+/* Bijeli okvir za tekst */
+.box {
+  padding: 20px 25px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
 a {
   color: #1f4e6b;
 }
@@ -294,5 +303,714 @@ textarea {
   .koraci li {
     padding: 5px 10px;
     font-size: 0.8em;
+  }
+}
+
+/* ---------- Cjenik ---------- */
+
+h2 {
+  margin: 40px 0 15px;
+  color: #1f4e6b;
+}
+
+.uvod {
+  text-align: center;
+  color: #555;
+}
+
+/* Tri kartice s cijenama */
+.kartice {
+  display: flex;
+  gap: 16px;
+  margin: 30px 0;
+}
+
+.kartica {
+  position: relative;
+  flex: 1;
+  padding: 25px 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.kartica h3 {
+  margin: 0 0 5px;
+  color: #1f4e6b;
+}
+
+.kartica p {
+  margin: 0 0 15px;
+  text-align: center;
+}
+
+.kartica .osobe {
+  color: #777;
+  font-size: 0.9em;
+}
+
+.kartica .cijena strong {
+  font-size: 1.8em;
+  color: #000;
+}
+
+.kartica.preporuka {
+  border: 2px solid #1f4e6b;
+}
+
+.oznaka-kartice {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 2px 12px;
+  border-radius: 20px;
+  background-color: #1f4e6b;
+  color: #fff;
+  font-size: 0.8em;
+  white-space: nowrap;
+}
+
+/* Tablice – na uskom ekranu se pomiču lijevo-desno */
+.tablica {
+  overflow-x: auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #000;
+}
+
+caption {
+  padding: 12px;
+  font-weight: bold;
+  color: #1f4e6b;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #e9eef2;
+  text-align: center;
+}
+
+thead th {
+  background-color: #1f4e6b;
+  color: #fff;
+}
+
+thead .datum {
+  font-weight: normal;
+  font-size: 0.85em;
+}
+
+tbody th {
+  text-align: left;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f6f8fa;
+}
+
+tbody tr:hover {
+  background-color: #e9eef2;
+}
+
+/* Istaknuta glavna sezona */
+thead th.sezona {
+  background-color: #163a50;
+}
+
+td.sezona {
+  font-weight: bold;
+}
+
+tfoot td {
+  border-bottom: none;
+  color: #777;
+  font-size: 0.85em;
+}
+
+.da {
+  color: #2e8b57;
+  font-weight: bold;
+}
+
+.ne {
+  color: #c0392b;
+}
+
+/* Poziv na rezervaciju */
+.poziv {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.poziv h3 {
+  margin-top: 0;
+}
+
+.poziv p {
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .kartice {
+    flex-direction: column;
+    gap: 25px;
+  }
+}
+
+/* ---------- Rezervacija ---------- */
+
+/* Broj koraka u krugu */
+.broj {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  background-color: #1f4e6b;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 40px;
+}
+
+/* Popis s informacijama */
+.info {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.info li {
+  padding: 10px 0;
+  border-bottom: 1px solid #e9eef2;
+}
+
+.info li:last-child {
+  border-bottom: none;
+}
+
+/* ---------- Zaglavlje, odjeljci i podnožje ---------- */
+
+header {
+  padding: 30px 16px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header p {
+  margin: 5px 0 0;
+  color: #777;
+  text-align: center;
+}
+
+/* Bijeli odjeljak s tekstom */
+section {
+  margin-bottom: 25px;
+  padding: 20px 25px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+section h2 {
+  margin: 0 0 10px;
+}
+
+section p:last-child {
+  margin-bottom: 0;
+}
+
+footer {
+  padding: 20px 16px;
+  background-color: #1f4e6b;
+  color: #fff;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  text-align: center;
+}
+
+/* ---------- Apartmani ---------- */
+
+/* Privremeno mjesto za fotografiju – zamijeni s <img> */
+.foto-mjesto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 15px;
+  border: 2px dashed #c5d0d8;
+  border-radius: 6px;
+  background-color: #f6f8fa;
+  color: #999;
+  text-align: center;
+}
+
+/* Galerija – četiri manje fotografije u redu */
+.galerija {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.galerija .foto-mjesto {
+  aspect-ratio: 4 / 3;
+  margin: 0;
+  font-size: 0.8em;
+}
+
+.galerija img {
+  margin: 0;
+  border-width: 5px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.podaci {
+  color: #777;
+  font-size: 0.9em;
+}
+
+section .cijena strong {
+  font-size: 1.5em;
+}
+
+/* Oprema u dva stupca s kvačicama */
+.oprema {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.oprema li::before {
+  content: "✔ ";
+  color: #2e8b57;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .galerija {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .oprema {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Galerija s dvije fotografije (O nama) */
+.galerija.dvije {
+  grid-template-columns: 1fr 1fr;
+}
+
+/* ---------- Kontakt ---------- */
+
+/* Četiri kartice s kontaktima, po dvije u redu */
+.kontakti {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 25px;
+}
+
+.kontakti .kartica p {
+  margin: 0;
+}
+
+.ikona {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1.8em;
+}
+
+/* Google karta */
+.karta iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border: 0;
+  border-radius: 6px;
+}
+
+@media (max-width: 600px) {
+  .kontakti {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Fotografija na vrhu bijelog odjeljka (Ponuda smještaja) */
+section > img:first-child {
+  margin-top: 0;
+}
+
+/* ---------- Početna – sve u okvirima ---------- */
+
+/* Stranica preko cijele širine ekrana */
+.pocetna {
+  margin: 0;
+  padding: 10px 16px;
+}
+
+/* Zaglavlje, izbornik, glavni dio i podnožje – svaki u svom okviru */
+.pocetna header,
+.pocetna nav,
+.pocetna main,
+.pocetna footer {
+  margin-bottom: 10px;
+  padding: 15px 20px;
+  border: 1px solid #c5d0d8;
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+/* Naslovni okvir – fotografija Makarske s tamnim slojem i bijelim slovima */
+.pocetna header {
+  padding: 60px 30px;
+  border: none;
+  background-image: linear-gradient(rgba(16, 42, 58, 0.65), rgba(16, 42, 58, 0.65)),
+    url("slike-makarska/slika01.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: left;
+}
+
+.pocetna header h1 {
+  margin: 0;
+  color: #fff;
+  font-size: 2.6em;
+  text-align: left;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.pocetna header p {
+  margin: 8px 0 0;
+  color: #ffd27a;
+  font-size: 1.2em;
+  font-style: italic;
+  text-align: left;
+}
+
+/* Izbornik – tamnoplava traka, bijela slova, zlatna kad se prijeđe mišem */
+.pocetna nav {
+  justify-content: flex-start;
+  gap: 5px;
+  padding: 8px 12px;
+  border: none;
+  background-color: #163a50;
+}
+
+.pocetna nav a {
+  padding: 8px 14px;
+  border-radius: 4px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.9em;
+}
+
+.pocetna nav a:hover {
+  background-color: #ffd27a;
+  color: #163a50;
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .pocetna header {
+    padding: 40px 20px;
+  }
+
+  .pocetna header h1 {
+    font-size: 1.8em;
+  }
+}
+
+.pocetna main {
+  max-width: none;
+}
+
+.pocetna footer {
+  color: #555;
+}
+
+/* Svaki odjeljak u svom okviru unutar glavnog dijela */
+.pocetna section {
+  margin-bottom: 15px;
+  padding: 15px 20px;
+  border: 1px solid #c5d0d8;
+  border-radius: 6px;
+  box-shadow: none;
+}
+
+.pocetna section:last-of-type {
+  margin-bottom: 0;
+}
+
+.pocetna section h3 {
+  margin: 20px 0 5px;
+}
+
+/* Fotografije unutar okvira – tanki sivi rub umjesto bijelog */
+.pocetna section img {
+  margin: 15px 0;
+  border: 1px solid #c5d0d8;
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+/* Tri apartmana u redu */
+.mini-apartmani {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.mini-apartmani a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  text-align: center;
+}
+
+.mini-apartmani img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.pocetna .mini-apartmani img {
+  margin: 0 0 8px;
+}
+
+.mini-apartmani strong {
+  display: block;
+  color: #1f4e6b;
+}
+
+.mini-apartmani span {
+  color: #777;
+  font-size: 0.9em;
+}
+
+.mini-apartmani a:hover strong {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .mini-apartmani {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Slika lijevo, tekst desno (Dobrodošli) */
+.dva-stupca {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.pocetna .dva-stupca img {
+  margin: 0;
+}
+
+/* Mreža manjih okvira – četiri u redu, na užem ekranu dva, na mobitelu jedan */
+.mreza {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.mali-okvir {
+  padding: 10px;
+  border: 1px solid #c5d0d8;
+  border-radius: 6px;
+}
+
+.pocetna .mali-okvir img {
+  margin: 0 0 8px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.pocetna .mali-okvir h3 {
+  margin: 0 0 5px;
+}
+
+.mali-okvir p {
+  margin: 0;
+  font-size: 0.9em;
+  text-align: left;
+}
+
+@media (max-width: 900px) {
+  .mreza {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .mreza,
+  .dva-stupca {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tekst u kontrastnom okviru (Dobrodošli) */
+.kontrast {
+  padding: 20px 25px;
+  border-radius: 6px;
+  background-color: #1f4e6b;
+  color: #fff;
+}
+
+.kontrast p {
+  margin: 0 0 12px;
+  text-align: left;
+}
+
+.kontrast p:last-child {
+  margin-bottom: 0;
+}
+
+.kontrast strong {
+  color: #ffd27a;
+}
+
+.kontrast .moto {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.3em;
+}
+
+/* ---------- Portali i podnožje ---------- */
+
+.portali ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.portali li {
+  margin-bottom: 4px;
+}
+
+/* Podnožje – tamni okvir sa stupcima poredanima vodoravno */
+.pocetna footer {
+  padding: 25px 20px 15px;
+  border-color: #1f4e6b;
+  background-color: #1f4e6b;
+  color: #fff;
+}
+
+.podnozje {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  text-align: left;
+}
+
+.podnozje h4 {
+  margin: 0 0 10px;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.podnozje p {
+  margin: 0 0 10px;
+  font-size: 0.9em;
+  text-align: left;
+}
+
+.podnozje ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.podnozje li {
+  margin-bottom: 6px;
+}
+
+.podnozje a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.podnozje a:hover {
+  text-decoration: underline;
+}
+
+/* Newsletter – polje i gumb u istom redu */
+.newsletter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.newsletter input[type="email"] {
+  flex: 1;
+  min-width: 150px;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 5px;
+  font: inherit;
+}
+
+.newsletter .gumb {
+  padding: 8px 16px;
+  border-color: #fff;
+  background-color: #fff;
+  color: #1f4e6b;
+}
+
+.newsletter label {
+  display: flex;
+  gap: 6px;
+  align-items: flex-start;
+  font-size: 0.8em;
+}
+
+.newsletter a {
+  text-decoration: underline;
+}
+
+.autorska {
+  margin: 20px 0 0;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 0.85em;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .podnozje {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .podnozje {
+    grid-template-columns: 1fr;
   }
 }

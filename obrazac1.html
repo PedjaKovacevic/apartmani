@@ -32,11 +32,25 @@
           <div class="red">
             <div class="polje">
               <label for="ime">Ime <span class="obavezno">*</span></label>
-              <input type="text" id="ime" name="ime" autocomplete="given-name" required />
+              <input
+                type="text"
+                id="ime"
+                name="ime"
+                autocomplete="given-name"
+                required
+              />
             </div>
             <div class="polje">
-              <label for="prezime">Prezime <span class="obavezno">*</span></label>
-              <input type="text" id="prezime" name="prezime" autocomplete="family-name" required />
+              <label for="prezime"
+                >Prezime <span class="obavezno">*</span></label
+              >
+              <input
+                type="text"
+                id="prezime"
+                name="prezime"
+                autocomplete="family-name"
+                required
+              />
             </div>
           </div>
 
@@ -46,7 +60,9 @@
               <input type="date" id="datum_rodenja" name="datum_rodenja" />
             </div>
             <div class="polje">
-              <label for="drzavljanstvo">Državljanstvo <span class="obavezno">*</span></label>
+              <label for="drzavljanstvo"
+                >Državljanstvo <span class="obavezno">*</span></label
+              >
               <select id="drzavljanstvo" name="drzavljanstvo" required>
                 <option value="">– odaberite –</option>
                 <option>Hrvatsko</option>
@@ -69,20 +85,45 @@
           <div class="red">
             <div class="polje">
               <label for="email">E-mail <span class="obavezno">*</span></label>
-              <input type="email" id="email" name="email" placeholder="ime@primjer.hr" autocomplete="email" required />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="ime@primjer.hr"
+                autocomplete="email"
+                required
+              />
             </div>
             <div class="polje">
-              <label for="telefon">Telefon <span class="obavezno">*</span></label>
-              <input type="tel" id="telefon" name="telefon" placeholder="+385 91 123 4567" autocomplete="tel" required />
+              <label for="telefon"
+                >Telefon <span class="obavezno">*</span></label
+              >
+              <input
+                type="tel"
+                id="telefon"
+                name="telefon"
+                placeholder="+385 91 123 4567"
+                autocomplete="tel"
+                required
+              />
             </div>
           </div>
 
           <div class="polje">
             <span class="oznaka">Kako vas najradije kontaktiramo?</span>
             <div class="izbori">
-              <label><input type="radio" name="kontakt" value="email" checked /> E-mail</label>
-              <label><input type="radio" name="kontakt" value="telefon" /> Telefon</label>
-              <label><input type="radio" name="kontakt" value="whatsapp" /> WhatsApp / Viber</label>
+              <label
+                ><input type="radio" name="kontakt" value="email" checked />
+                E-mail</label
+              >
+              <label
+                ><input type="radio" name="kontakt" value="telefon" />
+                Telefon</label
+              >
+              <label
+                ><input type="radio" name="kontakt" value="whatsapp" /> WhatsApp
+                / Viber</label
+              >
             </div>
           </div>
 
